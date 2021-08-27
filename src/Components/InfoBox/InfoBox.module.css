@@ -1,0 +1,17 @@
+.mainContainer{
+    width: 72.5%;
+    height: 85vh;
+}
+
+.flightInfoBanner{
+    width: 100%;
+    height: 80px;
+    border: 1px solid;
+}
+
+.cardContainer{
+    width: 100%;
+    height: 80%;
+    padding-bottom: 15px;
+    overflow: auto;
+}
