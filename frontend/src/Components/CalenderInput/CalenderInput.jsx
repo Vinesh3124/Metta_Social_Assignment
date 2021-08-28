@@ -5,9 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 // import styles from "./CalenderInput.module.css"
 import './style.css';
 
-export default function App() {
-  const [startDate, setStartDate] = useState(false);
-  const [endDate, setEndDate] = useState(false);
+export default function App({setStartDate, setEndDate, startDate, endDate, oneway}) {
 
   return (
     <>
@@ -23,7 +21,7 @@ export default function App() {
           endDate={endDate}
           onChange={(date) => setStartDate(date)}
         />
-        <DatePicker
+        {!oneway && <DatePicker
           selected={endDate}
           placeholderText="Return Date"
           calendarClassName="red-border"
@@ -33,7 +31,7 @@ export default function App() {
           endDate={endDate}
           minDate={startDate}
           onChange={(date) => setEndDate(date)}
-        />
+        />}
       </div>
     </>
   );
