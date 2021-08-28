@@ -3,5 +3,37 @@
     height: 450px;
     margin: auto;
     margin-top: 5%;
-    border: 1px solid;
+    /* border: 1px solid; */
+}
+
+.inputBox{
+    width: 95%;
+    margin-top: 4%;
+}
+
+.selectBox{
+    width: 97%;
+    height: 25px;
+    margin-top: 1%;
+}
+
+.selectBox_pass{
+    width: 97%;
+    height: 25px;
+    margin-top: 19%;
+}
+
+.btn{
+    margin-top: 4%;
+}
+
+.tabList{
+    border: none;
+}
+
+.sliderContainer{
+    border: 1px solid #AAAAAA;
+    height: 120px;
+    text-align: center;
+    margin-top: 20%;
 }

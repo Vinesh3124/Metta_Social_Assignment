@@ -1,0 +1,16 @@
+.slider_parent {
+  position: relative;
+  width: 100%;
+}
+
+.buble {
+  position: absolute;
+  border: 1px solid #AAAAAA;
+  margin-left: 5%;
+  padding: 5px;
+}
+
+.slider_parent_slide{
+  width: 90%;
+  margin: auto;
+}
