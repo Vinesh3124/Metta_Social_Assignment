@@ -17,7 +17,7 @@ const FlightCard = ({el, flightData}) => {
                         <p>{`Depart: ${el.Departure_Time}`}</p>
                         <p>{`Arrive: ${el.Arrival_Time}`}</p>
                     </div>
-                   {flightData.end_date && <div className={styles.infoBox_bookDetails_right}>
+                   {flightData.one_way && <div className={styles.infoBox_bookDetails_right}>
                         <p>{el.Plane_code}</p>
                         <p>{`${el.City_Code_Destination} > ${el.City_Code_Origin}`}</p>
                         <p>{`Depart: ${el.Arrival_Time}`}</p>
