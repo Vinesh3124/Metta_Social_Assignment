@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Metta Social Flight Booking Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech Stacks Used
+- React for frontend
+- Mock json server for backend
 
-## Available Scripts
+## Source
 
-In the project directory, you can run:
+- React: [React](https://www.npmjs.com/package/react)
 
-### `npm start`
+- Redux: [Redux](https://www.npmjs.com/package/redux) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React-Redux: [React-Redux](https://www.npmjs.com/package/react-redux)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Redux-thunks: [Redux-thunks](https://www.npmjs.com/package/thunks)
 
-### `npm test`
+- Axios: [Axios](https://www.npmjs.com/package/axios)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to run the project 📑
 
-### `npm run build`
+## For Front-end
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    1.Clone the repo using https://github.com/Vinesh3124/Metta_Social_Assignment.git.
+    
+    2.Open the front-end folder and run the command npm i and then npm run start in terminal to start the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    3.Go to the browser you will land in the landing page just Register and login if you have signed up before or do the signup.
+    
+## Usage instruction
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can serach for flight for four cities (Pune, Delhi, Goa and Kochi). The flight date are available between 29/09/2021 till 30/10/2021.
 
-### `npm run eject`
+## Limitations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Responsiveness: App is responsive till 780px
+- Payment Slider not yet implemented
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Will be working on the project for adding the missing parts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Demo Link
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+React App: https://metta-social-assignment.vercel.app/
+Mock Server Link: http://metta-social-assign.herokuapp.com/flights
 
-## Learn More
+## Sample Data to Search
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### One-way
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Origin City: Goa
+- Destination City: Pune
+- Departure Date: 30/09/2021
 
-### Code Splitting
+## Return
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Origin City: Goa
+- Destination City: Pune
+- Departure Date: 29/09/2021
+- Return Date: 01/10/2021
