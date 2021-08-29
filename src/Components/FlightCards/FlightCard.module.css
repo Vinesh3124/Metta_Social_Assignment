@@ -79,3 +79,8 @@
 .infoBox_bookDetails_left>p:nth-child(1), .infoBox_bookDetails_right>p:nth-child(1){
     font-size: 12px;
 }
+
+.img{
+    width: 100%;
+    height: 100%;
+}

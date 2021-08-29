@@ -2,7 +2,7 @@ import React from "react";
 import FilterBox from "../FilterBox/FilterBox";
 import InfoBox from "../InfoBox/InfoBox";
 import styles from "./HomePage.module.css";
-import {getSearch} from "../../Redux/Serach/action"
+import {getSearch, getReturnSearch} from "../../Redux/Serach/action"
 import { useDispatch } from "react-redux";
 
 
@@ -11,7 +11,7 @@ const HomePage = () => {
   const dispatch = useDispatch()
 
   dispatch(getSearch(flightData))
-
+  dispatch(getReturnSearch(flightData))
   return (
     <>
       <h2 className={styles.heading}>Flight Search Engine</h2>

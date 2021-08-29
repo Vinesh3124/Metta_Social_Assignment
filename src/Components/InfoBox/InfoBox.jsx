@@ -5,7 +5,7 @@ import styles from "./InfoBox.module.css";
 
 const InfoBox = ({ flightData }) => {
   const data = useSelector(state=>state.search.data)
-  console.log(data);
+//   console.log(data);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.flightInfoBanner}>
@@ -27,12 +27,12 @@ const InfoBox = ({ flightData }) => {
           {flightData?.start_date  && 
           <>
             <p>{`Depart: ${flightData?.string_date}`}</p>
-            {flightData?.end_date && <p>{`Return: ${flightData?.string_date}`}</p>}
+            {(flightData?.end_date !== "undefined/undefined/undefined") && <p>{`Return: ${flightData?.e_str_date}`}</p>}
           </>}
         </div>
       </div>
       <div className={styles.cardContainer}>
-        <FlightCard />
+        {data?.map(el => <FlightCard key={el.id}  el={el} flightData={flightData}/>)}
       </div>
     </div>
   );
