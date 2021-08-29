@@ -15,7 +15,7 @@ const InfoBox = ({ flightData }) => {
           ) : (
             <>
               {" "}
-              {flightData?.end_date ? (
+              {flightData?.one_way ? (
                 <h2>{`${flightData?.origin_city} > ${flightData?.dest_city} > ${flightData?.origin_city}`}</h2>
               ) : (
                 <h2>{`${flightData?.origin_city} > ${flightData?.dest_city}`}</h2>
