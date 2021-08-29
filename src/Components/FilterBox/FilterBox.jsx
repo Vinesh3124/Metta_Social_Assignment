@@ -32,7 +32,12 @@ const FilterBox = ({setFlightData}) => {
 
     let num_month;
     if (startDate) {
-      num_month = startDate.getMonth() + 1;
+      if(startDate.getMonth() < 10){
+        num_month = 0+`${startDate.getMonth()+1}`
+      }
+      else{
+        num_month = startDate.getMonth() + 1;
+      }
     }
     let sDate = `${sp[2]}/${num_month}/${sp[3]}`;
     let str_month = sp[1];

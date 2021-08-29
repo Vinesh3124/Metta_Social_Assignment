@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import FlightCard from "../FlightCards/FlightCard";
 import styles from "./InfoBox.module.css";
 
 const InfoBox = ({ flightData }) => {
-  console.log(flightData);
+  const data = useSelector(state=>state.search.data)
+  console.log(data);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.flightInfoBanner}>
