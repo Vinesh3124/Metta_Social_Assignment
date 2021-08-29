@@ -216,7 +216,6 @@ const FilterBox = ({setFlightData}) => {
             </form>
           </TabPanel>
         </Tabs>
-
         <div className={styles.sliderContainer}>
           <p>Refine flight search</p>
           <Slider setPrice={setPrice} price={price} />

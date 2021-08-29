@@ -11,7 +11,9 @@ const HomePage = () => {
   const dispatch = useDispatch()
 
   dispatch(getSearch(flightData))
-  dispatch(getReturnSearch(flightData))
+  if(flightData?.returnway){
+    dispatch(getReturnSearch(flightData))
+  }
   return (
     <>
       <h2 className={styles.heading}>Flight Search Engine</h2>

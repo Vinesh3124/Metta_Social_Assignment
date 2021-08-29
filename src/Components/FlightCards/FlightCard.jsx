@@ -8,7 +8,7 @@ const FlightCard = ({el, flightData}) => {
         <div className={styles.card}>
             <div className={styles.infoBox}>
                 <div className={styles.infoBox_amount}>
-                    <span>{!flightData.one_way ? `RS. ${(el.Price * flightData.passengers)}` : `RS. ${(el.Price * flightData.passengers)*2}`}</span>
+                    <span>{flightData.one_way ? `RS. ${(el.Price * flightData.passengers) * 2}` : `RS. ${(el.Price * flightData.passengers)}`}</span>
                 </div>
                 <div className={styles.infoBox_bookDetails}>
                     <div className={styles.infoBox_bookDetails_left}>
