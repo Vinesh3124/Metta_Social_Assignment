@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import Slider from "../Slider/Slider";
 import CalenderInput from "../CalenderInput/CalenderInput";
 
-const FilterBox = () => {
+const FilterBox = ({setFlightData}) => {
   const [oneway, setOneway] = React.useState(true);
   const [startDate, setStartDate] = React.useState(false);
   const [endDate, setEndDate] = React.useState(false);
@@ -36,6 +36,7 @@ const FilterBox = () => {
     }
     let sDate = `${sp[2]}/${num_month}/${sp[3]}`;
     let str_month = sp[1];
+    let StrDate = `${sp[2]} ${str_month} ${sp[3]}`;
 
     const payload = {
       origin_city: origin,
@@ -43,9 +44,11 @@ const FilterBox = () => {
       passengers: pass,
       start_date: sDate,
       end_date: endDate,
-      price: price
+      price: price,
+      month_str: str_month,
+      string_date: StrDate
     };
-    console.log(payload)
+    setFlightData(payload)
   };
 
   return (
