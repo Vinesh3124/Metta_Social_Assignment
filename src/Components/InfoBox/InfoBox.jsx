@@ -5,7 +5,7 @@ import styles from "./InfoBox.module.css";
 
 const InfoBox = ({ flightData }) => {
   const data = useSelector(state=>state.search.data)
-//   console.log(data);
+  console.log(data);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.flightInfoBanner}>

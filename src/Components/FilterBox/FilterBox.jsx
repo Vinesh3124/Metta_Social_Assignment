@@ -35,8 +35,9 @@ const FilterBox = ({setFlightData}) => {
 
     let start_num_month;
     if (startDate) {
-      if(startDate.getMonth() < 10){
+      if(startDate.getMonth() <= 8){
         start_num_month = 0+`${startDate.getMonth()+1}`
+        console.log(start_num_month)
       }
       else{
         start_num_month = startDate.getMonth() + 1;
@@ -48,7 +49,7 @@ const FilterBox = ({setFlightData}) => {
 
     let end_num_month;
     if (endDate) {
-      if(endDate.getMonth() < 10){
+      if(endDate.getMonth() <= 8){
         end_num_month = 0+`${endDate.getMonth()+1}`
       }
       else{
@@ -84,7 +85,7 @@ const FilterBox = ({setFlightData}) => {
 
     let start_num_month;
     if (startDate) {
-      if(startDate.getMonth() < 10){
+      if(startDate.getMonth() <= 8){
         start_num_month = 0+`${startDate.getMonth()+1}`
       }
       else{
@@ -97,7 +98,7 @@ const FilterBox = ({setFlightData}) => {
 
     let end_num_month;
     if (endDate) {
-      if(endDate.getMonth() < 10){
+      if(endDate.getMonth() <= 8){
         end_num_month = 0+`${endDate.getMonth()+1}`
       }
       else{
