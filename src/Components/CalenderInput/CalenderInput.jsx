@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-// import styles from "./CalenderInput.module.css"
-import './style.css';
+import "./style.css";
 
-export default function App({setStartDate, setEndDate, startDate, endDate, oneway}) {
-
+export default function App({
+  setStartDate,
+  setEndDate,
+  startDate,
+  endDate,
+  oneway,
+}) {
   return (
     <>
       <div>
@@ -21,17 +25,19 @@ export default function App({setStartDate, setEndDate, startDate, endDate, onewa
           endDate={endDate}
           onChange={(date) => setStartDate(date)}
         />
-        {!oneway && <DatePicker
-          selected={endDate}
-          placeholderText="Return Date"
-          calendarClassName="red-border"
-          dateFormat="dd/MM/yyyy"
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          minDate={startDate}
-          onChange={(date) => setEndDate(date)}
-        />}
+        {!oneway && (
+          <DatePicker
+            selected={endDate}
+            placeholderText="Return Date"
+            calendarClassName="red-border"
+            dateFormat="dd/MM/yyyy"
+            selectsEnd
+            startDate={startDate}
+            endDate={endDate}
+            minDate={startDate}
+            onChange={(date) => setEndDate(date)}
+          />
+        )}
       </div>
     </>
   );

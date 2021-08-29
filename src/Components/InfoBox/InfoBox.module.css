@@ -32,3 +32,8 @@
     line-height: 40%;
     font-size: 14px;
 }
+
+.errorMsg{
+    margin-left: 28%;
+    color: red;
+}

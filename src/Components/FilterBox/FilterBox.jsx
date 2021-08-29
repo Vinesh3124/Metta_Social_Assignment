@@ -4,16 +4,20 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Slider from "../Slider/Slider";
 import CalenderInput from "../CalenderInput/CalenderInput";
+import { useDispatch } from "react-redux";
+import { getFilter } from "../../Redux/Filter/action";
 
-const FilterBox = ({setFlightData}) => {
+const FilterBox = () => {
   const [oneway, setOneway] = React.useState(true);
-  const [returnway, setReturnway] = React.useState(false);
+  let [returnway, setReturnway] = React.useState(false);
   const [startDate, setStartDate] = React.useState(false);
   const [endDate, setEndDate] = React.useState(false);
   const [origin, setOrigin] = React.useState("");
   const [destination, setDestination] = React.useState("");
   const [pass, setPass] = React.useState(0);
   const [price, setPrice] = React.useState(1500);
+
+  const dispatch = useDispatch();
 
   const handleOChange = (e) => {
     setOrigin(e.target.value);
@@ -29,17 +33,17 @@ const FilterBox = ({setFlightData}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setReturnway(true)
+    setReturnway((returnway = false));
+    console.log(returnway + "t");
     const sp = startDate.toString().trim().split(" ");
     const ed = endDate.toString().trim().split(" ");
 
     let start_num_month;
     if (startDate) {
-      if(startDate.getMonth() <= 8){
-        start_num_month = 0+`${startDate.getMonth()+1}`
-        console.log(start_num_month)
-      }
-      else{
+      if (startDate.getMonth() <= 8) {
+        start_num_month = 0 + `${startDate.getMonth() + 1}`;
+        console.log(start_num_month);
+      } else {
         start_num_month = startDate.getMonth() + 1;
       }
     }
@@ -49,10 +53,9 @@ const FilterBox = ({setFlightData}) => {
 
     let end_num_month;
     if (endDate) {
-      if(endDate.getMonth() <= 8){
-        end_num_month = 0+`${endDate.getMonth()+1}`
-      }
-      else{
+      if (endDate.getMonth() <= 8) {
+        end_num_month = 0 + `${endDate.getMonth() + 1}`;
+      } else {
         end_num_month = endDate.getMonth() + 1;
       }
     }
@@ -71,24 +74,23 @@ const FilterBox = ({setFlightData}) => {
       string_date: StrDate,
       e_month_str: e_str_month,
       e_str_date: e_StrDate,
-      one_way: returnway
+      one_way: returnway,
     };
-    console.log(payload)
-    setFlightData(payload)
+    console.log(returnway);
+    dispatch(getFilter(payload));
   };
 
   const handleSubmit2 = (e) => {
     e.preventDefault();
-    setReturnway(false)
+    setReturnway((returnway = true));
     const sp = startDate.toString().trim().split(" ");
     const ed = endDate.toString().trim().split(" ");
 
     let start_num_month;
     if (startDate) {
-      if(startDate.getMonth() <= 8){
-        start_num_month = 0+`${startDate.getMonth()+1}`
-      }
-      else{
+      if (startDate.getMonth() <= 8) {
+        start_num_month = 0 + `${startDate.getMonth() + 1}`;
+      } else {
         start_num_month = startDate.getMonth() + 1;
       }
     }
@@ -98,10 +100,9 @@ const FilterBox = ({setFlightData}) => {
 
     let end_num_month;
     if (endDate) {
-      if(endDate.getMonth() <= 8){
-        end_num_month = 0+`${endDate.getMonth()+1}`
-      }
-      else{
+      if (endDate.getMonth() <= 8) {
+        end_num_month = 0 + `${endDate.getMonth() + 1}`;
+      } else {
         end_num_month = endDate.getMonth() + 1;
       }
     }
@@ -119,11 +120,11 @@ const FilterBox = ({setFlightData}) => {
       string_date: StrDate,
       e_month_str: e_str_month,
       e_str_date: e_StrDate,
-      one_way: returnway
+      one_way: returnway,
     };
-    console.log(payload)
-    setFlightData(payload)
-  } 
+    console.log(returnway);
+    dispatch(getFilter(payload));
+  };
 
   return (
     <div className={styles.mainContainer}>
@@ -203,7 +204,10 @@ const FilterBox = ({setFlightData}) => {
                   endDate={endDate}
                 />
               </div>
-              <select onChange={handleDropChange} className={styles.selectBox_pass} >
+              <select
+                onChange={handleDropChange}
+                className={styles.selectBox_pass}
+              >
                 <option>Passengers</option>
                 <option>1</option>
                 <option>2</option>

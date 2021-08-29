@@ -1,7 +1,7 @@
 import {GET_SEARCH_REQUEST, GET_SEARCH_SUCCESS, GET_SEARCH_FAILURE} from "./actionType"
 
 const initState = {
-    data: [],
+    data: undefined,
     isLoading: false,
     isError: false
 }
